@@ -29,6 +29,15 @@ app.use(cors());
 app.post("/auth/register", register);
 app.post("/posts", verifyToken, createPost);
 
+app.get("/fareed", (req,res)=>{
+  const data = {
+    name:'fareed',
+    message:"fuckoff"
+  }
+  res.status(200).json(data)
+})
+
+
 /* ROUTES */
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
